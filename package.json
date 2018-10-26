@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/johnnyb912/stylelint-config-sensible-scss/issues"
   },
-  "homepage": "https://github.com/johnnyb912/stylelint-config-sensible-scss#readme"
+  "homepage": "https://github.com/johnnyb912/stylelint-config-sensible-scss#readme",
+  "devDependencies": {
+    "stylelint": "^9.6.0",
+    "stylelint-order": "^1.0.0",
+    "stylelint-scss": "^3.3.2"
+  }
 }
