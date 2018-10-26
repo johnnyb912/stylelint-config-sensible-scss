@@ -1,0 +1,24 @@
+{
+  "name": "stylelint-config-sensible-scss",
+  "version": "1.0.0",
+  "description": "A sensible Scss config for Stylelint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnyb912/stylelint-config-sensible-scss.git"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelint-scss",
+    "stylelint-config"
+  ],
+  "author": "John Boyle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnnyb912/stylelint-config-sensible-scss/issues"
+  },
+  "homepage": "https://github.com/johnnyb912/stylelint-config-sensible-scss#readme"
+}
