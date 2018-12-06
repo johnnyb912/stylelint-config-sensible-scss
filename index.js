@@ -116,7 +116,7 @@ module.exports = {
         'function-url-scheme-whitelist': null,
         'function-whitelist': null,
         'function-whitespace-after': 'always',
-        indentation: 4,
+        indentation: 2,
         'keyframe-declaration-no-important': true,
         'keyframes-name-pattern': null,
         'length-zero-no-unit': true,
