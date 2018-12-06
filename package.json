@@ -21,9 +21,14 @@
     "url": "https://github.com/johnnyb912/stylelint-config-sensible-scss/issues"
   },
   "homepage": "https://github.com/johnnyb912/stylelint-config-sensible-scss#readme",
-  "devDependencies": {
-    "stylelint": "^9.9.0",
+  "dependencies": {
     "stylelint-order": "^2.0.0",
     "stylelint-scss": "^3.4.1"
+  },
+  "peerDependencies": {
+    "stylelint": "^9.9.0"
+  },
+  "devDependencies": {
+    "stylelint": "^9.9.0"
   }
 }
