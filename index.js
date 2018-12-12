@@ -238,7 +238,7 @@ module.exports = {
         'scss/at-mixin-parentheses-space-before': 'never',
         'scss/at-mixin-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
         'scss/at-rule-no-unknown': true,
-        'scss/dollar-variable-colon-newline-after': 'always-multi-line',
+        'scss/dollar-variable-colon-newline-after': null,
         'scss/dollar-variable-colon-space-after': 'always',
         'scss/dollar-variable-colon-space-before': 'never',
         'scss/dollar-variable-default': null,
@@ -263,7 +263,7 @@ module.exports = {
         'scss/declaration-nested-properties': null,
         'scss/declaration-nested-properties-no-divided-groups': true,
         'scss/media-feature-value-dollar-variable': null,
-        'scss/operator-no-newline-after': true,
+        'scss/operator-no-newline-after': null,
         'scss/operator-no-newline-before': true,
         'scss/operator-no-unspaced': true,
         'scss/partial-no-import': null,
@@ -271,7 +271,8 @@ module.exports = {
         'scss/no-duplicate-dollar-variables': [
             true,
             {
-                ignoreInside: ['at-rule', 'nested-at-rule']
+                ignoreInside: ['at-rule'],
+                ignoreInsideAtRules: ['if', 'mixin', 'function']
             }
         ],
         'order/order': [
