@@ -249,7 +249,7 @@ module.exports = {
             }
         ],
         'scss/dollar-variable-no-missing-interpolation': null,
-        'scss/dollar-variable-pattern': '^[_]?[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
+        'scss/dollar-variable-pattern': '^[_]?[a-zA-Z]+([a-zA-Z0-9-_]+[a-zA-Z0-9]+)?$',
         'scss/percent-placeholder-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
         'scss/double-slash-comment-empty-line-before': [
             'always',
