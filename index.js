@@ -359,6 +359,13 @@ module.exports = {
                         'clear',
                         'clip',
                         'color',
+                        'columns',
+                        'column-count',
+                        'column-gap',
+                        'column-fill',
+                        'column-rule',
+                        'column-span',
+                        'column-width',
                         'content',
                         'counter-increment',
                         'counter-reset',
@@ -385,18 +392,45 @@ module.exports = {
                         'flex-pack',
                         'flex-shrink',
                         'flex-wrap',
-                        'align-content',
-                        'align-items',
-                        'align-self',
-                        'justify-content',
                         'order',
-                        'columns',
-                        'column-gap',
-                        'column-fill',
-                        'column-rule',
-                        'column-span',
-                        'column-count',
-                        'column-width'
+                    ]
+                },
+                {
+                    properties: [
+                        'grid',
+                        'grid-template',
+                        'grid-template-rows',
+                        'grid-template-columns',
+                        'grid-template-areas',
+                        'grid-auto-rows',
+                        'grid-auto-columns',
+                        'grid-auto-flow',
+                        'grid-gap',
+                        'grid-row-gap',
+                        'grid-column-gap'
+                    ]
+                }, {
+                    properties: [
+                        'grid-area',
+                        'grid-row',
+                        'grid-row-start',
+                        'grid-row-end',
+                        'grid-column',
+                        'grid-column-start',
+                        'grid-column-end'
+                    ]
+                },
+                {
+                    properties: [
+                        'align-items',
+                        'justify-items',
+                        'place-items',
+                        'justify-content',
+                        'align-content',
+                        'place-content',
+                        'justify-self',
+                        'align-self',
+                        'place-self'
                     ]
                 },
                 {
