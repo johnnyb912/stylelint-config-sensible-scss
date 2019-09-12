@@ -10,7 +10,7 @@ module.exports = {
                     'after-comment',
                     'blockless-after-same-name-blockless'
                 ],
-                ignoreAtRules: ['else']
+                ignoreAtRules: ['keyframes', 'else', 'mixin']
             }
         ],
         'at-rule-name-case': 'lower',
@@ -307,6 +307,7 @@ module.exports = {
                     emptyLineBefore: 'always',
                     properties: [
                         'appearance',
+                        'alignment-baseline',
                         'backface-visibility',
                         'background',
                         'background-attachment',
@@ -319,6 +320,7 @@ module.exports = {
                         'background-clip',
                         'background-origin',
                         'background-size',
+                        'baseline-shift',
                         'behavior',
                         'border',
                         'border-width',
@@ -384,15 +386,15 @@ module.exports = {
                 {
                     properties: [
                         'flex',
-                        'flex-align',
+                        'flex-grow',
+                        'flex-shrink',
                         'flex-basis',
                         'flex-direction',
+                        'flex-wrap',
                         'flex-flow',
-                        'flex-grow',
+                        'flex-align',
                         'flex-order',
                         'flex-pack',
-                        'flex-shrink',
-                        'flex-wrap',
                         'order',
                     ]
                 },
@@ -436,6 +438,9 @@ module.exports = {
                 },
                 {
                     properties: [
+                        'fill',
+                        'fill-opacity',
+                        'fill-rule',
                         'filter',
                         'float',
                         'font',
@@ -507,6 +512,13 @@ module.exports = {
                         'scrollbar-3dlight-color',
                         'scrollbar-shadow-color',
                         'scrollbar-darkshadow-color',
+                        'stroke',
+                        'stroke-dasharray',
+                        'stroke-dashoffset',
+                        'stroke-linecap',
+                        'stroke-linejoin',
+                        'stroke-opacity',
+                        'stroke-width',
                         'tab-size',
                         'table-layout',
                         'text-align',
@@ -546,19 +558,7 @@ module.exports = {
                         'cy',
                         'r',
                         'rx',
-                        'ry',
-                        'alignment-baseline',
-                        'baseline-shift',
-                        'fill',
-                        'fill-opacity',
-                        'fill-rule',
-                        'stroke',
-                        'stroke-dasharray',
-                        'stroke-dashoffset',
-                        'stroke-linecap',
-                        'stroke-linejoin',
-                        'stroke-opacity',
-                        'stroke-width'
+                        'ry'
                     ]
                 },
                 {
