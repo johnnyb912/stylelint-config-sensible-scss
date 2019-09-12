@@ -10,7 +10,7 @@ module.exports = {
                     'after-comment',
                     'blockless-after-same-name-blockless'
                 ],
-                ignoreAtRules: ['keyframes', 'else', 'mixin']
+                ignoreAtRules: ['keyframes', 'media', 'include', 'else', 'mixin']
             }
         ],
         'at-rule-name-case': 'lower',
