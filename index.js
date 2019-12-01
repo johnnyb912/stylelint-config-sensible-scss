@@ -362,13 +362,6 @@ module.exports = {
                         'clip',
                         'clip-path',
                         'color',
-                        'columns',
-                        'column-count',
-                        'column-gap',
-                        'column-fill',
-                        'column-rule',
-                        'column-span',
-                        'column-width',
                         'content',
                         'counter-increment',
                         'counter-reset',
@@ -410,7 +403,16 @@ module.exports = {
                         'grid-auto-flow',
                         'grid-gap',
                         'grid-row-gap',
-                        'grid-column-gap'
+                        'grid-column-gap',
+                        'gap',
+                        'columns',
+                        'column-count',
+                        'column-gap',
+                        'column-fill',
+                        'column-rule',
+                        'column-span',
+                        'column-width',
+                        'row-gap',
                     ]
                 }, {
                     properties: [
