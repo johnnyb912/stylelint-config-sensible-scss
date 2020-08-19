@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-sensible-scss",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A sensible Scss config for Stylelint",
   "main": "index.js",
   "scripts": {

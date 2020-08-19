@@ -139,7 +139,7 @@ module.exports = {
         'media-query-list-comma-newline-before': null,
         'media-query-list-comma-space-after': 'always',
         'media-query-list-comma-space-before': 'never',
-        'no-descending-specificity': false,
+        'no-descending-specificity': null,
         'no-duplicate-at-import-rules': true,
         'no-duplicate-selectors': true,
         'no-empty-source': true,
