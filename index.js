@@ -1,6 +1,14 @@
 module.exports = {
-    plugins: ['stylelint-scss', 'stylelint-order'],
+    extends: ['stylelint-config-standard-scss'],
+    plugins: ['stylelint-order'],
     rules: {
+        'alpha-value-notation': 'number',
+        'annotation-no-unknown': [
+            true,
+            {
+                ignoreAnnotations: ['default']
+            }
+        ],
         'at-rule-disallowed-list': ['debug'],
         'at-rule-empty-line-before': [
             'always',
@@ -8,50 +16,15 @@ module.exports = {
                 except: ['after-same-name', 'first-nested'],
                 ignore: [
                     'after-comment',
+                    'blockless-after-blockless',
                     'blockless-after-same-name-blockless'
                 ],
                 ignoreAtRules: ['keyframes', 'media', 'include', 'else', 'mixin']
             }
         ],
-        'at-rule-name-case': 'lower',
-        'at-rule-name-newline-after': null,
-        'at-rule-name-space-after': 'always',
-        'at-rule-no-unknown': null,
-        'at-rule-no-vendor-prefix': true,
-        'at-rule-semicolon-newline-after': 'always',
-        'at-rule-semicolon-space-before': 'never',
-        'at-rule-allowed-list': null,
-        'block-closing-brace-empty-line-before': 'never',
-        'block-closing-brace-newline-after': [
-            'always',
-            {
-                ignoreAtRules: ['if', 'else']
-            }
-        ],
-        'block-closing-brace-newline-before': 'always-multi-line',
-        'block-closing-brace-space-after': null,
-        'block-closing-brace-space-before': 'always-single-line',
-        'block-no-empty': true,
-        'block-opening-brace-newline-after': 'always-multi-line',
-        'block-opening-brace-newline-before': null,
-        'block-opening-brace-space-after': 'always-single-line',
-        'block-opening-brace-space-before': 'always',
-        'color-hex-case': 'lower',
-        'color-hex-length': 'short',
         'color-named': 'never',
         'color-no-hex': true,
-        'color-no-invalid-hex': true,
-        'comment-empty-line-before': [
-            'always',
-            {
-                except: ['first-nested'],
-                ignore: ['stylelint-commands']
-            }
-        ],
         'comment-no-empty': true,
-        'comment-whitespace-inside': 'always',
-        'comment-word-disallowed-list': null,
-        'custom-media-pattern': null,
         'custom-property-empty-line-before': [
             'always',
             {
@@ -64,210 +37,86 @@ module.exports = {
             }
         ],
         'custom-property-pattern': null,
-        'declaration-bang-space-after': 'never',
-        'declaration-bang-space-before': 'always',
-        'declaration-block-no-duplicate-properties': [
-            true,
-            {
-                ignore: ['consecutive-duplicates-with-different-values']
-            }
-        ],
-        'declaration-block-no-redundant-longhand-properties': true,
-        'declaration-block-no-shorthand-property-overrides': true,
-        'declaration-block-semicolon-newline-after': 'always-multi-line',
-        'declaration-block-semicolon-newline-before': 'never-multi-line',
-        'declaration-block-semicolon-space-after': 'always-single-line',
-        'declaration-block-semicolon-space-before': 'never',
         'declaration-block-single-line-max-declarations': 1,
-        'declaration-block-trailing-semicolon': 'always',
-        'declaration-colon-newline-after': 'always-multi-line',
-        'declaration-colon-space-after': 'always-single-line',
-        'declaration-colon-space-before': 'never',
         'declaration-empty-line-before': null,
         'declaration-no-important': true,
-        'declaration-property-unit-disallowed-list': null,
-        'declaration-property-unit-allowed-list': null,
         'declaration-property-value-disallowed-list': {
             border: ['none'],
-            'border-top': ['none'],
-            'border-right': ['none'],
-            'border-bottom': ['none'],
-            'border-left': ['none']
+            borderTop: ['none'],
+            borderRight: ['none'],
+            borderBottom: ['none'],
+            borderLeft: ['none']
         },
-        'declaration-property-value-allowed-list': null,
-        'font-family-name-quotes': 'always-unless-keyword',
-        'font-family-no-duplicate-names': true,
-        'font-family-no-missing-generic-family-keyword': true,
-        'font-weight-notation': null,
-        'function-disallowed-list': null,
-        'function-calc-no-unspaced-operator': true,
-        'function-comma-newline-after': null,
-        'function-comma-newline-before': null,
-        'function-comma-space-after': 'always-single-line',
-        'function-comma-space-before': 'never',
-        'function-linear-gradient-no-nonstandard-direction': true,
-        'function-max-empty-lines': 0,
-        'function-name-case': 'lower',
-        'function-parentheses-newline-inside': null,
-        'function-parentheses-space-inside': 'never-single-line',
-        'function-url-no-scheme-relative': true,
-        'function-url-quotes': 'always',
-        'function-url-scheme-disallowed-list': null,
-        'function-url-scheme-allowed-list': null,
-        'function-allowed-list': null,
-        'function-whitespace-after': 'always',
-        indentation: 4,
-        'keyframe-declaration-no-important': true,
-        'keyframes-name-pattern': null,
-        'length-zero-no-unit': true,
-        linebreaks: 'unix',
-        'max-empty-lines': 1,
-        'max-line-length': null,
-        'max-nesting-depth': [4, { 'severity': 'warning' }],
-        'media-feature-colon-space-after': 'always',
-        'media-feature-colon-space-before': 'never',
-        'media-feature-name-disallowed-list': null,
-        'media-feature-name-case': 'lower',
-        'media-feature-name-no-unknown': true,
-        'media-feature-name-no-vendor-prefix': true,
-        'media-feature-name-value-allowed-list': null,
-        'media-feature-name-allowed-list': null,
-        'media-feature-parentheses-space-inside': 'never',
-        'media-feature-range-operator-space-after': 'always',
-        'media-feature-range-operator-space-before': 'always',
-        'media-query-list-comma-newline-after': null,
-        'media-query-list-comma-newline-before': null,
-        'media-query-list-comma-space-after': 'always',
-        'media-query-list-comma-space-before': 'never',
-        'no-descending-specificity': null,
-        'no-duplicate-at-import-rules': true,
-        'no-duplicate-selectors': true,
-        'no-empty-source': true,
-        'no-empty-first-line': true,
-        'no-eol-whitespace': true,
-        'no-extra-semicolons': true,
-        'no-invalid-double-slash-comments': true,
-        'no-missing-end-of-source-newline': true,
-        'no-unknown-animations': null,
-        'number-leading-zero': 'always',
-        'number-max-precision': 9,
-        'number-no-trailing-zeros': true,
-        'property-disallowed-list': null,
-        'property-case': 'lower',
-        'property-no-unknown': true,
-        'property-no-vendor-prefix': true,
-        'property-allowed-list': null,
-        'rule-empty-line-before': [
-            'always',
+        'max-nesting-depth': [
+            4,
             {
-                except: ['after-single-line-comment', 'first-nested']
+                ignore: ['blockless-at-rules', 'pseudo-classes'],
+                severity: 'warning',
             }
         ],
-        'selector-attribute-brackets-space-inside': 'never',
-        'selector-attribute-operator-disallowed-list': null,
-        'selector-attribute-operator-space-after': 'never',
-        'selector-attribute-operator-space-before': 'never',
-        'selector-attribute-operator-allowed-list': null,
-        'selector-attribute-quotes': null,
+        'no-descending-specificity': null,
+        'no-empty-source': true,
+        'no-unknown-animations': true,
+        'property-no-vendor-prefix': [
+            true,
+            {
+                ignoreProperties: ['appearance', 'text-size-adjust']
+            }
+        ],
         'selector-class-pattern': null,
-        'selector-combinator-disallowed-list': null,
-        'selector-combinator-space-after': 'always',
-        'selector-combinator-space-before': 'always',
-        'selector-combinator-allowed-list': null,
-        'selector-descendant-combinator-no-non-space': null,
         'selector-id-pattern': null,
-        'selector-list-comma-newline-after': 'always',
-        'selector-list-comma-newline-before': null,
-        'selector-list-comma-space-after': null,
-        'selector-list-comma-space-before': 'never',
-        'selector-max-attribute': null,
-        'selector-max-class': null,
-        'selector-max-combinators': null,
-        'selector-max-compound-selectors': [4, { 'severity': 'warning' }],
-        'selector-max-empty-lines': 0,
         'selector-max-id': [0, { 'severity' : 'warning' }],
-        'selector-max-pseudo-class': null,
-        'selector-max-specificity': null,
         'selector-max-type': [0, { 'severity' : 'warning'}],
-        'selector-max-universal': null,
-        'selector-nested-pattern': null,
-        'selector-no-qualifying-type': [true, { 'severity' : 'warning'}],
-        'selector-no-vendor-prefix': true,
-        'selector-pseudo-class-disallowed-list': null,
-        'selector-pseudo-class-case': 'lower',
-        'selector-pseudo-class-no-unknown': true,
-        'selector-pseudo-class-parentheses-space-inside': 'never',
-        'selector-pseudo-class-allowed-list': null,
-        'selector-pseudo-element-disallowed-list': null,
-        'selector-pseudo-element-case': 'lower',
-        'selector-pseudo-element-colon-notation': 'double',
-        'selector-pseudo-element-no-unknown': true,
-        'selector-pseudo-element-allowed-list': null,
-        'selector-type-case': 'lower',
-        'selector-type-no-unknown': true,
-        'shorthand-property-no-redundant-values': true,
-        'string-no-newline': true,
-        'string-quotes': 'single',
-        'time-min-milliseconds': 250,
-        'unit-disallowed-list': null,
-        'unit-case': 'lower',
-        'unit-no-unknown': true,
-        'unit-allowed-list': null,
-        'value-keyword-case': null,
-        'value-list-comma-newline-after': null,
-        'value-list-comma-newline-before': null,
-        'value-list-comma-space-after': 'always-single-line',
-        'value-list-comma-space-before': 'never',
-        'value-list-max-empty-lines': 0,
-        'value-no-vendor-prefix': true,
-        'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
-        'scss/at-else-closing-brace-space-after': 'always-intermediate',
-        'scss/at-else-empty-line-before': 'never',
-        'scss/at-else-if-parentheses-space-before': 'always',
-        'scss/at-extend-no-missing-placeholder': true,
+        'selector-no-qualifying-type': [
+            true,
+            {
+                ignore: ['attribute']
+            }
+        ],
+        'selector-pseudo-element-no-unknown': [
+            true,
+            {
+                ignorePseudoElements: ['/^ng-/']
+            }
+        ],
+        'time-min-milliseconds': 200,
+        'value-keyword-case': [
+            'lower',
+            {
+                camelCaseSvgKeywords: true,
+            }
+        ],
+        'scss/at-each-key-value-single-line': true,
         'scss/at-function-named-arguments': null,
-        'scss/at-function-parentheses-space-before': 'never',
         'scss/at-function-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-        'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
-        'scss/at-if-closing-brace-space-after': 'always-intermediate',
-        'scss/at-import-no-partial-leading-underscore': true,
         'scss/at-import-partial-extension-blacklist': null,
         'scss/at-import-partial-extension-whitelist': null,
         'scss/at-mixin-argumentless-call-parentheses': null,
         'scss/at-mixin-named-arguments': null,
-        'scss/at-mixin-parentheses-space-before': 'never',
         'scss/at-mixin-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-        'scss/at-rule-no-unknown': true,
+        'scss/at-use-no-unnamespaced': true,
+        'scss/declaration-nested-properties': null,
+        'scss/dimension-no-non-numeric-values': true,
         'scss/dollar-variable-colon-newline-after': null,
-        'scss/dollar-variable-colon-space-after': 'always',
-        'scss/dollar-variable-colon-space-before': 'never',
         'scss/dollar-variable-default': null,
-        'scss/dollar-variable-empty-line-before': [
-            'always',
+        'scss/dollar-variable-first-in-block': [
+            true,
             {
-                except: ['first-nested', 'after-comment', 'after-dollar-variable']
+                ignore: ['comments', 'imports'],
+                except: ['function']
             }
         ],
         'scss/dollar-variable-no-missing-interpolation': null,
         'scss/dollar-variable-pattern': '^[_]?[a-zA-Z]+([a-zA-Z0-9-_]+[a-zA-Z0-9]+)?$',
-        'scss/percent-placeholder-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-        'scss/double-slash-comment-empty-line-before': [
-            'always',
+        'scss/double-slash-comment-inline': null,
+        'scss/function-color-relative': [
+            true,
             {
-                except: ['first-nested'],
-                ignore: ['between-comments', 'stylelint-commands']
+                severity: 'warning',
+                message: 'Use the built-in Sass scale-color method, https://sass-lang.com/documentation/modules/color#scale-color'
             }
         ],
-        'scss/double-slash-comment-inline': null,
-        'scss/double-slash-comment-whitespace-inside': 'always',
-        'scss/declaration-nested-properties': null,
-        'scss/declaration-nested-properties-no-divided-groups': true,
         'scss/media-feature-value-dollar-variable': null,
-        'scss/operator-no-newline-after': null,
-        'scss/operator-no-newline-before': true,
-        'scss/operator-no-unspaced': true,
-        'scss/partial-no-import': null,
-        'scss/selector-no-redundant-nesting-selector': true,
         'scss/no-duplicate-dollar-variables': [
             true,
             {
@@ -275,15 +124,20 @@ module.exports = {
                 ignoreInsideAtRules: ['if', 'mixin', 'function']
             }
         ],
+        'scss/partial-no-import': null,
+        'scss/percent-placeholder-pattern': '^[a-zA-Z]+([a-z0-9-]+[a-z0-9]+)?$',
+        'scss/selector-no-redundant-nesting-selector': true,
         'order/order': [
             'custom-properties',
             'dollar-variables',
-            'declarations'
+            'declarations',
+            'rules'
         ],
         'order/properties-order': [
             [
                 {
                     emptyLineBefore: 'never',
+                    noEmptyLineBetween: true,
                     properties: [
                         'position',
                         'top',
@@ -294,6 +148,7 @@ module.exports = {
                     ]
                 },
                 {
+                    noEmptyLineBetween: true,
                     properties: [
                         'width',
                         'min-width',
@@ -377,21 +232,23 @@ module.exports = {
                     ]
                 },
                 {
+                    noEmptyLineBetween: true,
                     properties: [
                         'flex',
                         'flex-grow',
                         'flex-shrink',
                         'flex-basis',
+                        'flex-flow',
                         'flex-direction',
                         'flex-wrap',
-                        'flex-flow',
                         'flex-align',
                         'flex-order',
                         'flex-pack',
-                        'order',
+                        'order'
                     ]
                 },
                 {
+                    noEmptyLineBetween: true,
                     properties: [
                         'grid',
                         'grid-template',
@@ -412,9 +269,11 @@ module.exports = {
                         'column-rule',
                         'column-span',
                         'column-width',
-                        'row-gap',
+                        'row-gap'
                     ]
-                }, {
+                },
+                {
+                    noEmptyLineBetween: true,
                     properties: [
                         'grid-area',
                         'grid-row',
@@ -426,15 +285,16 @@ module.exports = {
                     ]
                 },
                 {
+                    noEmptyLineBetween: true,
                     properties: [
                         'align-items',
                         'justify-items',
                         'place-items',
-                        'justify-content',
                         'align-content',
+                        'justify-content',
                         'place-content',
-                        'justify-self',
                         'align-self',
+                        'justify-self',
                         'place-self'
                     ]
                 },
@@ -452,12 +312,14 @@ module.exports = {
                         'font-style',
                         'font-variant',
                         'font-weight',
+                        'font-display',
                         'font-size-adjust',
                         'font-stretch',
                         'font-effect',
                         'font-emphasize',
                         'font-emphasize-position',
                         'font-emphasize-style',
+                        'src',
                         'hyphens',
                         'letter-spacing',
                         'line-height',
@@ -498,6 +360,7 @@ module.exports = {
                         'overflow-x',
                         'overflow-y',
                         'overflow-scrolling',
+                        'overflow-wrap',
                         'padding',
                         'padding-top',
                         'padding-right',
@@ -505,7 +368,11 @@ module.exports = {
                         'padding-left',
                         'pointer-events',
                         'quotes',
+                        'resize',
                         'speak',
+                        'scrollbar-color',
+                        'scrollbar-width',
+                        'scrollbar-gutter',
                         'scrollbar-arrow-color',
                         'scrollbar-base-color',
                         'scrollbar-track-color',
@@ -538,9 +405,11 @@ module.exports = {
                         'text-overflow-mode',
                         'text-rendering',
                         'text-shadow',
+                        'text-size-adjust',
                         'text-transform',
                         'text-wrap',
                         'touch-action',
+                        'touch-callout',
                         'user-select',
                         'vertical-align',
                         'visibility',
@@ -552,6 +421,7 @@ module.exports = {
                     ]
                 },
                 {
+                    noEmptyLineBetween: true,
                     properties: [
                         'x',
                         'y',
@@ -564,6 +434,7 @@ module.exports = {
                     ]
                 },
                 {
+                    noEmptyLineBetween: true,
                     properties: [
                         'animation',
                         'animation-name',
@@ -576,6 +447,7 @@ module.exports = {
                     ]
                 },
                 {
+                    noEmptyLineBetween: true,
                     properties: [
                         'transform',
                         'transform-box',
@@ -584,6 +456,7 @@ module.exports = {
                     ]
                 },
                 {
+                    noEmptyLineBetween: true,
                     properties: [
                         'transition',
                         'transition-delay',
@@ -594,7 +467,9 @@ module.exports = {
                 }
             ],
             {
-                unspecified: 'bottomAlphabetical'
+                unspecified: 'bottomAlphabetical',
+                emptyLineBeforeUnspecified: 'threshold',
+                emptyLineMinimumPropertyThreshold: 3
             }
         ]
     }
