@@ -1,3 +1,16 @@
+# 3.0.0
+
+- Update `stylelint` to `v18.0.0`
+- Update `stylelint-config-standard-scss` to `v18.0.0`
+  - See the [stylelint-config-standard-scss changelog](https://github.com/stylelint-scss/stylelint-config-standard-scss/blob/main/CHANGELOG.md) for rule changes inherited from the extended configs
+- Update `stylelint-order` to `v8.1.3`
+- Breaking change: Removed: `stylelint` less than `18.0.0` from peer dependencies
+- Breaking change: Node.js `^22.22.2 || ^24.15.0 || >=26.0.0` is now required (per `stylelint` 18)
+  - See the [Stylelint migration guides](https://stylelint.io/migration-guide/to-18) for upgrade details
+- Added: `scss/load-partial-extension: never`
+- Removed: `declaration-block-single-line-max-declarations` (no longer exists in `stylelint`)
+- Removed: `scss/at-import-partial-extension-blacklist` and `scss/at-import-partial-extension-whitelist` (no longer exist in `stylelint-scss`)
+
 # 2.0.0
 
 - Update `stylelint` to `v15.0.2`
