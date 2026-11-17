@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-sensible-scss",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A sensible Scss config for Stylelint",
   "main": "index.js",
   "scripts": {
@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/johnnyb912/stylelint-config-sensible-scss#readme",
   "dependencies": {
-    "stylelint-config-standard-scss": "7.0.1",
-    "stylelint-order": "6.0.2"
+    "stylelint-config-standard-scss": "18.0.0",
+    "stylelint-order": "8.1.3"
   },
   "peerDependencies": {
-    "stylelint": "^15.0.0"
+    "stylelint": "^18.0.0"
   },
   "devDependencies": {
-    "stylelint": "15.2.0"
+    "stylelint": "18.0.0"
   }
 }

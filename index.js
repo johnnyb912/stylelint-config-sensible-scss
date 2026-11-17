@@ -37,7 +37,6 @@ module.exports = {
             }
         ],
         'custom-property-pattern': null,
-        'declaration-block-single-line-max-declarations': 1,
         'declaration-empty-line-before': null,
         'declaration-no-important': true,
         'declaration-property-value-disallowed-list': {
@@ -89,8 +88,7 @@ module.exports = {
         'scss/at-each-key-value-single-line': true,
         'scss/at-function-named-arguments': null,
         'scss/at-function-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-        'scss/at-import-partial-extension-blacklist': null,
-        'scss/at-import-partial-extension-whitelist': null,
+        'scss/load-partial-extension': 'never',
         'scss/at-mixin-argumentless-call-parentheses': null,
         'scss/at-mixin-named-arguments': null,
         'scss/at-mixin-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
